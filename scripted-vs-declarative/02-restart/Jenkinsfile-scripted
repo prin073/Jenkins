@@ -1,0 +1,11 @@
+node {
+    stage("1") {
+        sh 'echo "Hello World 1"'
+    }
+    stage("2") {
+        sh 'echo "Hello World 2"'
+    }
+    stage("3") {
+        sh 'echo "Hello World 3"'
+    }
+}
