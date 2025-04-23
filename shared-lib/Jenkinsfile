@@ -1,0 +1,17 @@
+Library "shared-library"
+
+pipeline {
+        agent any
+        
+        stages {
+            stage ("HelloWorld") {
+                steps {
+                
+                    helloWorld()
+                
+                }
+            
+            }
+        
+        }
+}
