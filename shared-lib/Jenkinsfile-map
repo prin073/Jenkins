@@ -7,8 +7,8 @@ pipeline {
             stage ("HelloWorldMap") {
                 steps {
                 
-                    helloWorldMap(name: "Prince", weekOfDay: "Thursday")
-                    helloWorldMap(weekOfDay: "Thursday", name: "Prince") // order doesn't matter
+                    map(name: "Prince", weekOfDay: "Thursday")
+                    map(weekOfDay: "Thursday", name: "Prince") // order doesn't matter
                 }
             
             }
