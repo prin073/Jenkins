@@ -1,0 +1,20 @@
+@Library("shared-library") _
+
+pipeline {
+        agent any
+        
+        stages {
+            stage ("ForLoop") {
+                steps {
+                
+                    forEach(["Prince", "Inaaya"])
+                    forLoop(["Prince", "Inaaya"])
+                    forLoopRange()
+                    forLoopDownTo()
+                    forLoopStep()
+                }
+            
+            }
+        
+        }
+}

@@ -8,6 +8,7 @@ pipeline {
                 steps {
                   listIterate(["Prince", "Inaaya", 1, 2])
                   listAdd(["Prince", "Inaaya"], "Mousami")
+                  listAddOperator(["Prince", "Inaaya"], "Mousami")
                   listRemove(["Prince", "Inaaya", "Mousami"], "Mousami")
                 }
             
