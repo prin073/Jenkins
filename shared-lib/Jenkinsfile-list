@@ -4,7 +4,7 @@ pipeline {
         agent any
         
         stages {
-            stage ("HelloWorldList") {
+            stage ("List") {
                 steps {
                   listIterate(["Prince", "Inaaya", 1, 2])
                   listAdd(["Prince", "Inaaya"], "Mousami")
