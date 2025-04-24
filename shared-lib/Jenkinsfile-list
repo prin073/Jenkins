@@ -6,7 +6,9 @@ pipeline {
         stages {
             stage ("HelloWorldList") {
                 steps {
-                  helloWorldListForEach(["Prince", "Ankit", 1, 2])
+                  listIterate(["Prince", "Inaaya", 1, 2])
+                  listAdd(["Prince", "Inaaya"], "Mousami")
+                  listRemove(["Prince", "Inaaya", "Mousami"], "Mousami")
                 }
             
             }
