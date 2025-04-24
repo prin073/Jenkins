@@ -1,0 +1,18 @@
+@Library("shared-library") _
+
+pipeline {
+        agent any
+        
+        stages {
+            stage ("HelloWorldMap") {
+                steps {
+                
+                    helloWorldMap(name="Prince", weekOfDay="Thursday")
+                    helloWorldMap(weekOfDay="Thursday", name="Prince") //with map position doesn't matter
+                
+                }
+            
+            }
+        
+        }
+}
