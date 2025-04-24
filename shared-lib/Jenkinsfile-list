@@ -11,7 +11,7 @@ pipeline {
                           echo "listIterate"
                           listIterate(["Prince", "Inaaya", 1, 2])
                           echo "listAddUsingConcat"
-                          listAddUsingConcat(["Prince", "Inaaya"], "Mousami")
+                          listAddUsingConcat("Mousami", ["Prince", "Inaaya"])
                           echo "listAddOperator"
                           listAddOperator("Mousami", ["Prince", "Inaaya"])
                           echo "listRemove"
