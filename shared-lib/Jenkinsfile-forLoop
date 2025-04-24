@@ -10,7 +10,8 @@ pipeline {
                     forEach(["Prince", "Inaaya"])
                     forLoop(["Prince", "Inaaya"])
                     forLoopRange()
-                    forLoopDownTo()
+                    forLoopDownTo()  //bypassed CPS
+                    forLoopClassic() //No CPS bypass
                     forLoopStep()
                 }
             
