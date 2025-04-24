@@ -1,0 +1,15 @@
+@Library("shared-library") _
+
+pipeline {
+        agent any
+        
+        stages {
+            stage ("HelloWorldList") {
+                steps {
+                  helloWorldList(["Prince", "Ankit", 1, 2])
+                }
+            
+            }
+        
+        }
+}
