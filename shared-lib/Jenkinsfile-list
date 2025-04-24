@@ -6,9 +6,13 @@ pipeline {
         stages {
             stage ("List") {
                 steps {
+                  echo "listIterate"
                   listIterate(["Prince", "Inaaya", 1, 2])
-                  listAdd(["Prince", "Inaaya"], "Mousami")
+                  echo "listAddUsingConcat"
+                  listAddUsingConcat(["Prince", "Inaaya"], "Mousami")
+                  echo "listAddOperator"
                   listAddOperator("Mousami", ["Prince", "Inaaya"])
+                  echo "listRemove"
                   listRemove("Mousami", ["Prince", "Inaaya", "Mousami"])
                 }
             
