@@ -6,12 +6,17 @@ pipeline {
         stages {
             stage ("ForLoop") {
                 steps {
-                
+                    echo "forEach"
                     forEach(["Prince", "Inaaya"])
+                    echo "forLoop"
                     forLoop(["Prince", "Inaaya"])
+                    echo "forLoopRange"
                     forLoopRange()
+                    echo "forLoopDownTo"
                     forLoopDownTo()  //bypassed CPS
+                    echo "forLoopClassic"
                     forLoopClassic() //No CPS bypass
+                    echo "forLoopStep"
                     forLoopStep()
                 }
             
