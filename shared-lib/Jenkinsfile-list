@@ -18,6 +18,8 @@ pipeline {
                           listAddOperator("Mousami", ["Prince", "Inaaya"])
                           echo "listRemove"
                           listRemove("Mousami", ["Prince", "Inaaya", "Mousami"])
+                          echo "defaultVariableList"
+                          defaultVariableList(["Prince", "Inaaya", "Mousami"])
                         }
                     }
             }
