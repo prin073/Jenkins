@@ -10,6 +10,7 @@ pipeline {
                     map(name: "Prince", weekOfDay: "Thursday")
                     map(weekOfDay: "Thursday", name: "Prince") // order doesn't matter
                     mapIterate(weekOfDay: "Thursday", name: "Prince")
+                    mapKeyValue(["firstName": "Prince", "lastName": "Kumar"])
                 }
             
             }
