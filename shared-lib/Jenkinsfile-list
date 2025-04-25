@@ -10,14 +10,19 @@ pipeline {
                     script {
                           echo "listIterate"
                           listIterate(["Prince", "Inaaya", 1, 2])
+
                           echo "listAdd"
                           listAdd("Mousami", ["Prince", "Inaaya"])
+
                           echo "listAddUsingConcat"
                           listAddUsingConcat("Mousami", ["Prince", "Inaaya"])
+
                           echo "listAddOperator"
                           listAddOperator("Mousami", ["Prince", "Inaaya"])
+
                           echo "listRemove"
                           listRemove("Mousami", ["Prince", "Inaaya", "Mousami"])
+
                           echo "defaultVariableList"
                           defaultVariableList(["Prince", "Inaaya", "Mousami"])
                         }

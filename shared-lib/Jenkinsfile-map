@@ -8,14 +8,21 @@ pipeline {
                 steps {
                     echo "map"
                     map(name: "Prince", weekOfDay: "Thursday")
+
                     echo "map"
                     map(weekOfDay: "Thursday", name: "Prince") // order doesn't matter
+
                     echo "mapIterate"
                     mapIterate(weekOfDay: "Thursday", name: "Prince")
+
                     echo "mapKeyValue"
                     mapKeyValue(["firstName": "Prince", "lastName": "Kumar"])
+
                     echo "defaultVariableMap"
                     defaultVariableMap(["firstName": "Prince", "lastName": "Kumar"])
+
+                    echo "mapUsingVariable"
+                    mapUsingVariable(["firstName": "Prince", "lastName": "Kumar"]
                 }
             
             }

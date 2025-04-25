@@ -6,9 +6,7 @@ pipeline {
         stages {
             stage ("HelloWorld") {
                 steps {
-                
                     helloWorld()
-                
                 }
             
             }
