@@ -22,7 +22,7 @@ pipeline {
                     defaultVariableMap(["firstName": "Prince", "lastName": "Kumar"])
 
                     echo "mapUsingVariable"
-                    mapUsingVariable(["firstName": "Prince", "lastName": "Kumar"]
+                    mapUsingVariable(["firstName": "Prince", "lastName": "Kumar"])
                 }
             
             }
