@@ -1,0 +1,15 @@
+@Library("shared-library") _
+
+pipeline {
+        agent {label "mac-agent"} //or agent {label "agent1"}
+        
+        stages {
+            stage ("HelloWorld") {
+                steps {
+                    helloWorld()
+                }
+            
+            }
+        
+        }
+}
