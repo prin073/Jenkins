@@ -1,4 +1,17 @@
 //parameterized input
+//We cannot assign a value like firstName = input(...) directly at top-level inside steps {} block in declarative pipeline.
+//In Declarative Pipelines, steps must only have "atomic" steps (like echo, sh, input),
+// and variable assignment must happen inside a script {} block.
+
+/*
+🧠 Do you need an agent for atomic steps like echo, input, sleep, etc.?
+
+Situation	                                                                            Need agent?                 	Why?
+Steps that run inside Jenkins master/controller memory (like echo, input, sleep)	❌ No agent needed	These are Groovy/Pipeline operations. They don’t require a real machine or shell.
+Steps that need OS-level commands (like sh, bat, git, docker)	✅ Agent needed	Jenkins must have a real node/agent to run shell/batch commands.
+
+
+*/
 
 def firstName = null
 
@@ -11,11 +24,14 @@ pipeline {
             stage ("input") {
                 agent any
                     steps {
-                        firstName = input(
-                                        message: "What is your first name?",
-                                        ok: "Submit",
-                                        parameters: [string(defaultValue: "Prince", name: "FIRST_NAME", trim: true)]
-                                      )
+                        script {
+                            firstName = input(
+                                            message: "What is your first name?",
+                                            ok: "Submit",
+                                            parameters: [string(defaultValue: "Prince", name: "FIRST_NAME", trim: true)]
+                                          )
+
+                        }
                 }
             
             }
