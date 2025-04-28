@@ -1,0 +1,25 @@
+//Now jenkins job won't acquire the agent during input wait period. It will only need/acquire the agent while running some commands
+
+@Library("shared-library") _
+
+pipeline {
+        agent none
+        
+        stages {
+            stage ("input") {
+                steps {
+                    input(message: "Hello World!", ok: "Submit")
+                }
+            
+            }
+            stage ("all done") {
+                steps {
+                    sh '''
+                        hostname
+                        pwd
+                    '''
+
+                }
+        
+        }
+}

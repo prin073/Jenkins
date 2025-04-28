@@ -1,0 +1,22 @@
+//Issue with this input pipeline is that pipeline occupies the agent completely when it's waiting for user input.
+//But for user input agent is not required by the step
+
+@Library("shared-library") _
+
+pipeline {
+        agent any
+        
+        stages {
+            stage ("input") {
+                steps {
+                    input(message: "Hello World!", ok: "Submit") //Jenkins job will wait for user input at this point
+                    sh '''
+                     hostname
+                     pwd
+                    '''
+                }
+            
+            }
+        
+        }
+}

@@ -1,0 +1,29 @@
+//parameterized input
+
+def firstName = null
+
+@Library("shared-library") _
+
+pipeline {
+        agent none
+        
+        stages {
+            stage ("input") {
+                steps {
+
+                    firstName = input(
+                                        message: "What is your first name?",
+                                        ok: "Submit",
+                                        parameters: [string(defaultValue: "Prince", name: "FIRST_NAME", trim: true)]
+                                      )
+                }
+            
+            }
+            stage ("output") {
+                steps {
+                    echo "My first name is ${firstName}"
+
+                }
+        
+        }
+}
