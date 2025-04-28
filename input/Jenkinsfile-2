@@ -7,13 +7,13 @@ pipeline {
         
         stages {
             stage ("input") {
-                    agent any
                     steps {
                         input(message: "Hello World!", ok: "Submit")
                     }
             
             }
             stage ("all done") {
+                agent any
                 steps {
                     sh '''
                         hostname
