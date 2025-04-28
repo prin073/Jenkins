@@ -1,4 +1,4 @@
-//parameterized input(f=different way)
+//parameterized input(f=different way). Input block directly inside stage block and not under steps block
 
 
 @Library("shared-library") _
@@ -9,7 +9,7 @@ pipeline {
         stages {
             stage ("input") {
                 agent any
-                    steps {
+
                         input {
                                 message "What is your first name?"
                                 ok "Submit"
@@ -17,7 +17,7 @@ pipeline {
                                         string(defaultValue: "Prince", name: "FIRST_NAME", trim: true)
                                 }
 
-                         }
+
                     }
             }
             stage ("output") {

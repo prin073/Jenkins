@@ -1,4 +1,4 @@
-//parameterized input
+//parameterized input. Input method steps block.
 //We cannot assign a value like firstName = input(...) directly at top-level inside steps {} block in declarative pipeline.
 //In Declarative Pipelines, steps must only have "atomic" steps (like echo, sh, input),
 // and variable assignment must happen inside a script {} block.
