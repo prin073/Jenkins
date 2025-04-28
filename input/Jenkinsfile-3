@@ -9,9 +9,9 @@ pipeline {
         
         stages {
             stage ("input") {
-                steps {
-
-                    firstName = input(
+                agent any
+                    steps {
+                        firstName = input(
                                         message: "What is your first name?",
                                         ok: "Submit",
                                         parameters: [string(defaultValue: "Prince", name: "FIRST_NAME", trim: true)]

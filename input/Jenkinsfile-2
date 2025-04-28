@@ -7,9 +7,10 @@ pipeline {
         
         stages {
             stage ("input") {
-                steps {
-                    input(message: "Hello World!", ok: "Submit")
-                }
+                    agent any
+                    steps {
+                        input(message: "Hello World!", ok: "Submit")
+                    }
             
             }
             stage ("all done") {
