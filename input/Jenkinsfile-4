@@ -1,4 +1,4 @@
-//parameterized input(f=different way). Input block directly inside stage block and not under steps block
+// In a Declarative Jenkins Pipeline, the input {} block is allowed — but only for manual approval without parameters.
 
 
 @Library("shared-library") _
@@ -9,18 +9,19 @@ pipeline {
         stages {
             stage ("input") {
                 agent any
-
-                        input {
-                                message "What is your first name?"
-                                ok "Submit"
+                        steps{
+                            input {
+                                message 'Do you want to proceed?'
+                                ok 'Yes'
                                 /*
                                 This won't work with input block in declarative pipeline
                                 parameters {
                                         string(defaultValue: "Prince", name: "FIRST_NAME", trim: true)
                                 }
                                 */
+                            }
+                        }
 
-                    }
             }
             stage ("output") {
                 steps {
