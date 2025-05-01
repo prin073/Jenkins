@@ -17,7 +17,7 @@ pipeline {
                                         string(defaultValue: "Prince", name: "FIRST_NAME", trim: true)
                                 }
                                 */
-                            }
+
                         }
 
             }
