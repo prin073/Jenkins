@@ -1,5 +1,6 @@
-// In a Declarative Jenkins Pipeline, the input {} block is allowed — but only for manual approval without parameters.
-
+// In a Declarative Jenkins Pipeline, the input {} block is not supported.
+// Below is Groovy's named argument syntax, and it's calling a step (in Jenkins terms), which under the hood is implemented as a method.
+//parameters with named syntax is not supported
 
 
 pipeline {
