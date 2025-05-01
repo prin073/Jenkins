@@ -1,7 +1,5 @@
 //Now jenkins job won't acquire the whole agent during input wait period. It will only need/acquire the agent while running some commands
 
-@Library("shared-library") _
-
 pipeline {
         agent none
         

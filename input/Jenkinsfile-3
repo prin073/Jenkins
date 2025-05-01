@@ -15,8 +15,6 @@ Steps that need OS-level commands (like sh, bat, git, docker)	✅ Agent needed	J
 
 def firstName = null
 
-@Library("shared-library") _
-
 pipeline {
         agent none
         
